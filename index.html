@@ -10,7 +10,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
     <style>
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://static.photos/medical/1200x630/42');
@@ -30,18 +29,19 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img class="h-10 w-auto" src="https://via.placeholder.com/150x50?text=Bigskys+Logo" alt="Bigskys Solutions Ltd">
+                        <img class="h-10 w-auto" src="https://via.placeholder.com/150x50?text=Bigskys+Logo" alt="BIGSKYS SOLUTIONS Ltd">
                     </div>
                 </div>
+                <!-- Desktop Menu -->
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#" class="text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services & Solutions</a>
-                    
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#hero" class="text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#Services" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services & Solutions</a>
+                    <a href="#About" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">About us</a>
+                    <a href="#Contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact us</a>
                 </div>
+                <!-- Mobile Menu Button -->
                 <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
@@ -49,28 +49,38 @@
         </div>
     </nav>
 
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg pt-16">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-gray-100">Home</a>
+            <a href="#Services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50">Services & Solutions</a>
+            <a href="#About" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50">About us</a>
+            <a href="#Contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50">Contact us</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <div id="hero" class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">INNOVATION DRIVEN; CUSTOMER FOCUSSED</h1>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">INNOVATION DRIVEN; CUSTOMER FOCUSED</h2>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Bigskys Solutions Ltd delivers secure, reliable, and sustainable supply chain solutions for healthcare prevention, diagnostics, and treatment products across Kenya.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">
-                    Explore Our Services and Solutions
+                   <a href="#Services" class="text-white hover:text-yellow-600">Explore Our Services and Solutions</a>
                 </button>
                 <button class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-md text-lg font-medium transition duration-300">
-                    Contact Our Team
+                   <a href="#Contact" class="text-blue-600 hover:text-yellow-600">Contact us</a>
                 </button>
             </div>
         </div>
     </div>
 
     <!-- About Section -->
-    <section class="py-20 bg-gray-50">
+    <section id="About" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="mb-12 lg:mb-0" data-aos="fade-right">
-                    <img src="http://static.photos/medical/1024x576/23" alt="Healthcare Solutions" class="rounded-lg shadow-xl">
+                    <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/background.jpg" alt="about us" class="rounded-lg shadow-xl">
                 </div>
                 <div data-aos="fade-left">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
@@ -88,7 +98,7 @@ enough staff to handle deadlines.</p>
         </div>
     </section>
 
-     <!-- mission Section -->
+      <!-- mission Section -->
     <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
@@ -99,7 +109,7 @@ enough staff to handle deadlines.</p>
                     affordable products.
                     We achieve this by:<br>
                     • Providing quality, best-value products and end-to-end supply chain services: Plan, Source,
-                        Move, Track, Store and Quality.<br>
+                      Move, Track, Store and Quality.<br>
                     • Deploying innovative, data-driven solutions to enhance supply chain agility.<br>
                 </p>
                 <div class="space-y-4">
@@ -107,118 +117,126 @@ enough staff to handle deadlines.</p>
                 </div>
             </div>
             <div class="mb-12 lg:mb-0" data-aos="fade-left">
-                <img src="http://static.photos/medical/1024x576/23" alt="Healthcare Solutions" class="rounded-lg shadow-xl">
+                <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/Bed.jpg" alt="Healthcare Solutions" class="rounded-lg shadow-xl" width="450" height="300">
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Services Section -->
-    <section class="py-20 bg-white">
+    <!-- OUR WORK Section -->
+    <section id="Services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Comprehensive Services</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Delivering innovative, reliable, and efficient solutions to strengthen your supply chain</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">OUR WORK</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our goal is to improve the lives of people through:</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-blue-600 mb-4">
                         <i data-feather="clipboard" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Vendor Prequalification</h3>
-                    <p class="text-gray-600">Rigorous evaluation and selection of suppliers to ensure quality and reliability in your supply chain.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Planning for product demand</h3>
+                    <p class="text-gray-600">Better predict demand and supply, streamline stock velocity, and initiate resource mobilization..</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-blue-600 mb-4">
-                        <i data-feather="file-text" class="w-10 h-10"></i>
+                        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/locale.jpg" class="w-10 h-10">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dossier Reviews</h3>
-                    <p class="text-gray-600">Comprehensive documentation analysis to ensure regulatory compliance and product quality standards.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tracking the location of products in the supply chain</h3>
+                    <p class="text-gray-600">Tailored, accurate, real-time information, data-driven decisions, and improved chain of custody.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-blue-600 mb-4">
                         <i data-feather="box" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Product Sampling & Testing</h3>
-                    <p class="text-gray-600">Quality assurance through systematic sampling and testing protocols for all healthcare products.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sourcing and procuring products</h3>
+                    <p class="text-gray-600">Lease and rental options, with prequalified and approved products.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-blue-600 mb-4">
                         <i data-feather="trending-up" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Forecasting & Demand Planning</h3>
-                    <p class="text-gray-600">Advanced analytics to predict demand patterns and optimize inventory levels for uninterrupted supply.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Adhering to quality standards and continuous improvement</h3>
+                    <p class="text-gray-600">Safe, effective, fit-for-use products, prequalification of vendors, and a world-class Quality Assurance Policy.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-blue-600 mb-4">
                         <i data-feather="truck" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Last-Mile Logistics</h3>
-                    <p class="text-gray-600">Efficient distribution network ensuring timely delivery of healthcare products to end-users.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Moving products internationally and locally </h3>
+                    <p class="text-gray-600">On-time and in-full deliveries, cost-effective transport, and custom and waiver clearance.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 value-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-blue-600 mb-4">
                         <i data-feather="database" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Warehousing & Storage</h3>
-                    <p class="text-gray-600">Secure, climate-controlled facilities with real-time inventory tracking for optimal product preservation.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Storing products in compliant warehousing</h3>
+                    <p class="text-gray-600">Warehousing and pharma-grade storage, warehouse management, and modular or temporary storage.</p>
                 </div>
+                
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="py-20 bg-blue-600 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4">Our Core Values</h2>
-                <p class="text-xl max-w-3xl mx-auto">Guiding principles that drive our commitment to excellence</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="zap" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Innovation</h3>
-                    <p class="text-blue-100">Continuously improving our solutions through technology and creative problem-solving.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="shield" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Reliability</h3>
-                    <p class="text-blue-100">Consistent, dependable service that healthcare providers can trust unconditionally.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="clock" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Efficiency</h3>
-                    <p class="text-blue-100">Optimized processes that deliver maximum value with minimal waste of resources.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="bar-chart-2" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Data-Driven</h3>
-                    <p class="text-blue-100">Evidence-based decision making powered by analytics and real-time insights.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+    <!--Our gallery Section -->
+  <section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12">Our Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/Bed.jpg" alt="Gallery Image 1" class="w-400 h-400 rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">Furniture.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/hospital linen.jpg" alt="Gallery Image 2" class="w-400 h-auto rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">Hospital Linen</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/surgical equipment.jpg" alt="Gallery Image 3" class="w-full h-auto rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">surgical equipment</p>
+      </div>
+       <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/stationery.jpg" alt="Gallery Image 6" class="w-full h-auto rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">stationery</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/background.jpg" alt="Gallery Image 4" class="w-full h-auto rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">medical tools and equipment</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/tray with equipment.jpg" alt="Gallery Image 5" class="w-full h-auto rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">surgical equipment</p>
+      </div>
+       <div class="flex flex-col items-center">
+               
+      </div>
+       <div class="flex flex-col items-center">
+        <img src="https://raw.githubusercontent.com/simo-muigaiii/bigskys-solutions/main/photos/lab reagents.jpg" alt="Gallery Image 6" class="w-full h-500 rounded-lg shadow-md mb-2">
+        <p class="text-gray-600 text-sm">lab materials and reagents</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
-    <!-- CTA Section -->
+    <!--Our commitment Section -->
     <section class="py-20 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-6">Ready to Strengthen Your Supply Chain?</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto">Partner with Bigskys Solutions Ltd for secure, reliable, and sustainable healthcare supply chain solutions in Kenya.</p>
+                <h2 class="text-3xl font-bold mb-6">Our commitment to you</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">Bigskys Solutions Ltd. is dedicated to working in partnership with health professionals to ensure
+they always have the right equipment to do their job to the best of their ability. We build long term
+relationships with our clients ensuring you extract the most value from every item we supply. With
+the highest of ethical standards, and a focus on excellence in all operational aspects of our
+business, we aspire to always exceed our client’s expectations. Our commitment to our clients is
+for the life of the product - we support and service every product we supply. </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">
-                        Request a Consultation
+                        <a href="#Contact" class="text-white-600 hover:text-yellow-600">Request a Consultation</a>
                     </button>
-                    <button class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">
-                        Learn More About Us
+                    <button class="bg-white hover:bg-white-60 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">
+                       <a href="#About" class="text-blue-600 hover:text-yellow-600">Learn More About Us</a> 
                     </button>
                 </div>
             </div>
@@ -226,9 +244,9 @@ enough staff to handle deadlines.</p>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-16 pb-8">
+    <footer id="Contact" class="bg-gray-800 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">               
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">                
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <address class="not-italic text-gray-400">
@@ -258,26 +276,29 @@ enough staff to handle deadlines.</p>
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        feather.replace();
-        
-        // Vanta.js Globe Background
-        VANTA.GLOBE({
-            el: "#hero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x3b82f6,
-            backgroundColor: 0x0,
-            size: 0.8
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            feather.replace();
         });
     </script>
 </body>
